@@ -1,0 +1,590 @@
+/*
+Theme Name: Morrie
+Theme URI: 
+Author: Ilyas Zemrani
+Author URI: https://ilyaszm.github.io/Portfolio/
+Description: Simple Portfolio website for photographers.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: portfoliothemes
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-primary-nav, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+
+* { outline: none;}
+html{height: 100%;}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    position:relative;
+    background: #110B11;
+}
+
+body::after {
+    content: '';
+    display: block;
+    height: 50px;
+}
+
+/*  NAVIGATION MENU */
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    position: fixed;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 3rem 1rem .5rem;
+    border-radius: 2px;
+    width: 150px;
+    z-index: 1;
+    right: -10.5rem;
+    transition: .5s;
+    background: rgb(233, 199, 48);
+    opacity: 1;
+}
+
+.navbar ul li a:hover {
+    right: 0;
+    filter: none;
+    background: #B7990D;
+}
+
+.navbar #menu-item-29 a {
+    top: 7rem;
+}
+
+.navbar #menu-item-11 a {
+    top: 11rem;
+}
+
+.navbar #menu-item-24 a {
+    top: 15rem;
+}
+
+.navbar #menu-item-20 a {
+    top: 19rem;
+}
+
+.navbar i {
+    padding: 0 1rem 0 .6rem;
+}
+
+/*  FOOTER */
+footer {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/*====================
+/*      FRONT PAGE
+/*====================*/
+
+.front-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 1rem;
+}
+
+.showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: 520px;
+    padding-bottom: 2rem;
+}
+
+.showcase img {
+    width: 140px;
+    border-radius: 50%;
+    border: 1px solid #B7990D;
+    justify-self: center;
+}
+
+.showcase h1 {
+    color: rgb(255, 215, 35);
+    letter-spacing: 5px;
+    font-family: 'Staatliches', cursive;
+    font-size: 38px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.showcase p {
+    color: #fff;
+    letter-spacing: 5px;
+    font-family: 'Acme', sans-serif;
+    font-size: 18px;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.infos {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-top: 1rem;
+}
+
+.infos .box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 250px;
+    height: auto;
+    background: rgb(36, 27, 36);
+    color: #a6a6a6;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 2px 15px 2px 15px;
+}
+
+.infos .box i{
+    font-size: 3rem;
+    justify-self: start;
+    align-self: center;
+}
+
+.infos .box p {
+    font-family: 'Charm', cursive;
+    font-size: 16px;
+}
+
+.buttons {
+    margin: 2rem 0;
+}
+
+#btnViewWork {
+    width: 140px;
+    height: 38px;
+    text-align: center;
+    color: #110B11;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    background: rgb(233, 199, 48);
+    border: 1px solid rgb(233, 199, 48);
+    cursor: pointer;
+    transition: .5s;
+}
+
+#btnViewWork:hover {
+    color: rgb(233, 199, 48);
+    background: transparent;
+}
+
+#btnContact {
+    width: 140px;
+    height: 38px;
+    text-align: center;
+    color: rgb(233, 199, 48);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    background: transparent;
+    border: 1px solid rgb(233, 199, 48);
+    cursor: pointer;
+}
+
+#btnContact:hover {
+    color: rgb(129, 107, 10);
+    border: 1px solid rgb(129, 107, 10);
+}
+
+.social-icons ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.social-icons ul li {
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+.social-icons ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.social-icons ul li a:hover {
+    color: #B7990D;
+}
+
+/*====================
+/*      ABOUT PAGE
+/*====================*/
+
+.page-title {
+    color: rgb(255, 215, 35);
+    font-family: 'Staatliches', cursive;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.page-title span {
+    color: #a6a6a6;
+    font-weight: lighter;
+}
+
+#hr1 {
+    width: 3rem;
+    height: .5rem;
+    background: #B7990D;
+    border: none;
+    margin-bottom: 3rem;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+.card {
+    width: 180px;
+    background: #f1f1f1;
+    overflow: hidden;
+    box-shadow: 0 0 20px #555;
+    margin: 2rem 0;
+    justify-self: center;
+}
+
+.card-header {
+    position: relative;
+}
+
+#about-img {
+    width: 180px;
+    height: auto;
+    justify-self: center;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+#about-img:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+.name {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 34px;
+    font-weight: 900;
+    opacity: .5;
+}
+
+.name span {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 40px;
+    padding-top: 0;
+    color: #333;
+}
+
+.card-footer-title {
+    position: relative;
+    font-size: 20px;
+    padding-left: 1rem;
+    font-family: 'Coiny', cursive;
+}
+
+.border {
+    width: 30px;
+    height: 3px;
+    background: #3e50ad;
+    left: 0;
+    bottom: -6px;
+}
+
+.s-m {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.s-m ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.s-m ul li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.s-m a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.s-m a:hover {
+    color: #B7990D;
+}
+
+#hr2 {
+    width: 75%;
+    border: 0.5px solid #555;
+}
+
+.main-content .post {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 1rem;
+}
+
+#para-intro {
+    color: #3e50ad;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+}
+
+#para1, #para2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#para1 {
+    color: #a6a6a6;
+    font-weight: bold;
+    border: 1px dashed rgb(51, 32, 51);
+    border-radius: 5px;
+    padding: 1.5rem;
+}
+
+#para2 {
+    color: #B7990D;
+    font-style: italic;
+}
+
+/*====================
+/*    PORTFOLIO PAGE
+/*====================*/
+
+.container {
+    padding: 1rem;
+}
+
+#envira-gallery-59 img {
+    width: 340px;
+    border-radius: 1px;
+}
+
+#envira-gallery-59 img:hover {
+    opacity: .8 !important;
+}
+
+/*====================
+/*    CONTACT PAGE
+/*====================*/
+
+.contact-page-main-content .post {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 1rem;
+}
+
+#wpforms-17 {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    padding: 2rem;
+    margin: 0;
+    width: 80%;
+}
+
+.contact-form #wpforms-17-field_4,
+.contact-form #wpforms-17-field_1,
+.contact-form #wpforms-17-field_2 {
+    background: rgba(85, 85, 85, 0.3);
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 2px;
+}
+
+.contact-form #wpforms-submit-17 {
+    font-size: 16px;
+    background: #111;
+    color: #a6a6a6;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: lighter;
+    border: 0px;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.contact-form #wpforms-submit-17:hover {
+    background: #B7990D;
+    color: #333;
+}
+
+/*====================
+/*    MEDIA QUERIES
+/*====================*/
+
+@media (min-width: 600px) {
+
+    .showcase img {
+        width: 170px;
+    }
+
+    .showcase h1 {
+        font-size: 44px;
+    }
+
+    .infos .box {
+        width: 290px;
+    }
+
+    .infos .box i{
+        font-size: 3.5rem;
+    }
+
+    #btnViewWork {
+        margin: 0 1rem;
+    }
+
+    #btnContact {
+        margin: 0 1rem;
+    }
+
+    /*  ABOUT PAGE */
+    .card, #about-img {
+        width: 200px;
+    }
+
+    #para-intro {
+        color: #3e50ad;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 22px;
+        float: left;
+    }
+
+    /*  PORTFOLIO PAGE */
+    .container {
+        padding: 1rem 3rem;
+    }
+    
+}
+
+@media (min-width: 768px) {
+
+    /*  HOME PAGE */
+    .content {
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .showcase h1 {
+        font-size: 65px;
+    }
+
+    /*  ABOUT PAGE */
+    .main-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 4fr;
+        justify-content: center;
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+
+    .card {
+        height: 420px;
+    }
+
+    #hr2 {
+        width: .009px;
+    }
+
+    .post {
+        justify-self: stretch;
+    }
+
+    #para1 {
+        align-self: center;
+    }
+
+    /*  PORTFOLIO PAGE */
+    .container {
+        padding: 1rem 4rem;
+    }
+
+    /*  CONTACT PAGE */
+    #wpforms-17 {
+        width: 65%;
+    }
+
+}
+@media (min-width: 992px) {
+
+    /*  HOME PAGE */
+
+    .showcase h1 {
+        margin: 0;
+    }
+    
+    .showcase p {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .infos {
+        align-items: center;
+    }
+
+    .infos .box {
+        width: 350px;
+    }
+    
+    /*  ABOUT PAGE */
+    .main-content {
+        padding-right: 9rem;
+        padding-left: 9rem;
+    }
+
+    /*  PORTFOLIO PAGE */
+    .container {
+        padding: 1rem 6rem;
+    }
+
+    /*  CONTACT PAGE */
+    #wpforms-17 {
+        width: 50%;
+    }
+
+}
